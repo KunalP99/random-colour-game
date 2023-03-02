@@ -1,23 +1,61 @@
-.box {
-  width: 200px;
-  height: 200px;
-  display: block;
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Golos Text', sans-serif;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 40px 0px;
+  position: absolute;
   margin-left: auto;
   margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+}
+
+.middle-container {
   margin-top: 40px;
+  position: absolute;
+  top: 50%;  
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.points {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .btn-container {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 40px;
+
 }
 
 button {
   padding: 10px 20px;
   border-radius: 16px;
   cursor: pointer;
+  font-size: 2rem;
 }
 button:hover {
   background: rgb(205, 205, 205);

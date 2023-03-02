@@ -31,7 +31,6 @@ function App() {
 
   // Checks if the correct button is clicked which if so, run the game again
   const handleClick = (e) => {
-    console.log(e.target.innerText);
     if (e.target.innerText === correctHex) {
       console.log('CORRECT');
       setPoints(points + 1);
@@ -44,12 +43,15 @@ function App() {
 
   return (
     <div className="App">
-      <p>{points}</p>    
+    <h1>GUESS THE HEX</h1> 
       <div className="box" style={{background: `${correctHex}`}}></div>
-      <div className='btn-container'>
-      {hexArray && hexArray.map(hex => {
-        return <button onClick={handleClick} key={hex}>{hex}</button>
-      })}
+      <div className='middle-container'>
+        <p className='points'>{points}</p>  
+        <div className='btn-container'>
+          {hexArray && hexArray.map(hex => {
+          return <button onClick={handleClick} key={hex}>{hex}</button>
+        })}
+        </div>
       </div>
     </div>
   );
